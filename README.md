@@ -17,7 +17,7 @@ For example:
 Create a program where we can append or prepend the decimal string of each datapoint, i.e.
 
 $$
-"123"\rightarrow "x123"\text{ or }"123x"\text{ or }"12"\text{ or }"23"\text{, where }x\in[0,9]\sub\Z
+"123"\rightarrow "x123"\text{ or }"123x"\text{ or }"12"\text{ or }"23"\text{, where }x\in[0,9]\subset\mathbb{Z}
 $$
 
 such that in the end, the distribution of the datapoint is closest to our "desired distribution".
