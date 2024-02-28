@@ -1,5 +1,7 @@
 import numpy as np
 
+# The case where everyone votes in a single voting booth.
+
 
 def to_array(num: int, b=10):
     """Convert number to array of digits.
