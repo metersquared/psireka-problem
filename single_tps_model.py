@@ -102,7 +102,7 @@ rng = np.random.default_rng(58)
 
 candidates = 3  # Number of candidate
 ideal_dist = [0.24, 0.58, 0.18]  # Number of distribution that we would ideally want
-max_vote = 1000  # Maximum number of votes that can be given to a candidate
+max_vote = 10000  # Maximum number of votes that can be given to a candidate
 
 votes = rng.integers(
     max_vote, size=(candidates,)
@@ -116,7 +116,9 @@ ideal_votes = np.rint(ideal_dist * total_vote)
 manipulated_votes = np.zeros(candidates)
 
 for idx, vote in enumerate(votes):
-    manipulated_votes[idx] = optimize(ideal_votes[idx], vote)
+    manipulated_votes[idx] = optimize(
+        ideal_votes[idx], vote
+    )  # Find optimal number closest to target
 
 print("Actual vote :", votes)
 print("Ideal vote :", ideal_votes)
@@ -125,3 +127,5 @@ print("Manipulated vote :", manipulated_votes)
 print("Actual vote distribution :", votes_dist)
 print("Ideal vote distribution :", ideal_dist)
 print("Manipulated vote distribution :", manipulated_votes / sum(manipulated_votes))
+
+# Result is poor ==> Choice of target matters!
