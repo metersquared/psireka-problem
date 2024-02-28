@@ -1,4 +1,6 @@
-# The $\Psi$-reka Problem
+# The Sireka Problem
+
+**(This is done for purely recreational purposes)**
 
 Let there be a desired distribution, i.e. 24.06% - 58.89% - 17.05%.
 
